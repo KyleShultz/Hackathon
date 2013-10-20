@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<story>
+	<title>The Mountain</title>
+	<description>Find rescue after crashing your car on the way to a camping trip</description>
+	<version>1.0</version>
+	<start-scene>Crash</start-scene>
+	<scenes>
+		<scene>
+			<scene-name>Introduction</scene-name>
+			<story-text>Welcome to Survivor: Text Based Edition\nYou are driving up the mountain to go on a spontaneous camping trip.  On your way up you notice a side road that is closed to traffic.  You feel brave with your Jeep and decide to go up it.  A few hours up the road you start to get very sleepy, but you still have not found a suitable camping site and push on.  You nod off and crash into a tree getting knocked out in the process.  As you come to you notice it is snowing, night time, and you are trapped in your car.  
+			</story-text>
+			<options>
+				<option>
+					<option-text>Sleep</option-text>
+					<option-requires></option-requires>
+					<option-destination>Introduction-Sleep</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Inspect-car</option-text>
+					<option-requires></option-requires>
+					<option-destination>Introduction-Inspect</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Introduction-Sleep</scene-name>
+			<story-text>You decide to get rest and wake up in the morning.</story-text>
+			<options>
+				<option>
+					<option-text>Wake Up</option-text>
+					<option-destination>Wake up</option-destination>
+					<option-requires></option-requires>
+					<option-destination>Introduction-Inspect</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Introduction-Inspect</scene-name>
+			<story-text>You look around do you want to inspect your window or glovebox? </story-text>
+			<options>
+				<option>
+					<option-text>Inspect glovebox</option-text>
+					<option-requires></option-requires>
+					<option-destination>Introduction-Glovebox</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Inspect window (Night)</option-text>
+					<option-requires></option-requires>
+					<option-destination>Inspect Window</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Inspect glovebox</scene-name>
+			<story-text>You see a flashlight, wallet, broken smartphone, and insurance papers.  You take this any of it may be useful later! </story-text>
+			<options>
+				<option>
+					<option-text>Return to option-Inspect</option-text>
+					<option-requires></option-requires>
+					<option-destination>Introduction-Inspect car</option-destination>
+					<add-inventory> flashlight, wallet, broken smartphone, insurance papers</add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Inspect Window</scene-name>
+			<story-text>You see a crack in the window...Do you want to try to break it? </story-text>
+			<options>
+				<option>
+					<option-text>Break the window?</option-text>
+					<option-requires>Flashlight</option-requires>
+					<option-destination>Outside the car</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>No. I don't want to break the window! or can't...</option-text>
+					<option-requires></option-requires>
+					<option-destination>Inspect-Car</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Outside the car-Night</scene-name>
+			<story-text>You break open the window and a rush of a cold air rushes through the window.  You climb through outside.  You look around and can either go to a cave you see in the distance or go back into your car and sleep</story-text>
+			<options>
+				<option>
+					<option-text>Go to cave</option-text>
+					<option-requires></option-requires>
+					<option-destination>Cave scene</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Go back into the car</option-text>
+					<option-requires></option-requires>
+					<option-destination>Inspect car</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Wake up</scene-name>
+			<story-text>You wake up from sleeping and realize where you are again.  You feel rested but must push on!  You look at your surroundings</story-text>
+			<options>
+				<option>
+					<option-text>Inspect car- Day time</option-text>
+					<option-requires>Sleep</option-requires>
+					<option-destination>Inspect car-Day</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Inspect car- day </scene-name>
+			<options>
+				<option>
+					<option-text>Inspect the window</option-text>
+					<option-requires></option-requires>
+					<option-destination>Inspect window (Day)</option-destination>
+					<add-inventory></add-inventory>
+					</option>
+				<option>
+					<option-text>Inspect glovebox</option-text>
+					<option-requires></option-requires>
+					<option-destination>Inspect glovebox</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Inspect window (Day)</scene-name>
+			<story-text>You inspect the window and see a giant crack in it.  You think you can break it if you had the right thing...perhaps that flashlight.  You use the flashlight to break the window open and climb outside.</story-text>
+			<options>
+				<option>
+					<option-text>Break the window</option-text>
+					<option-requires>Flashlight</option-requires>
+					<option-destination>Outside (Day)</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Outside (Day)</scene-name>
+			<story-text>You get outside and you consider your options.  You look around and can start trying to get back to civilization....or perhaps you want to see if anything survived the wreck in your trunk</story-text>
+			<options>
+				<option>
+					<option-text>Inspect trunk</option-text>
+					<option-requires></option-requires>
+					<option-destination>Trunk</option-destination>
+					<add-inventory></add-inventory>
+					<remove-inventory>PlayGame</remove-inventory>
+				</option>
+				<option>
+					<option-text>Proceed down the road</option-text>
+					<option-requires></option-requires>
+					<option-destination>Proceed (without trunk)</option-destination>
+					<add-inventory></add-inventory>
+					<remove-inventory></remove-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Trunk</scene-name>
+			<story-text>You take a look inside your trunk and see some useful items.  You take a backpack, a day of rations, ripped sleeping bag, ripped tent, and of course your trusty hatchet</story-text>
+			<options>
+				<option>
+					<option-text>Proceed downt the road</option-text>
+					<option-requires></option-requires>
+					<option-destination>Proceed (with trunk)</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Proceed (without trunk)</scene-name>
+			<story-text>You are questioning your decision not to take the time to inspect your trunk.  Now that you are a few hours out you realize you had some very useful supplies.  You begin to walk back but have lost your way as the snow has covered your tracks.  After a few days of useless wandering you collapse and freeze.</story-text>
+			<options>
+				<option>
+					<option-text>End game</option-text>
+					<option-requires></option-requires>
+					<option-destination></option-destination>
+					<remove-inventory>PlayGame</remove-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Proceed (with trunk)</scene-name>
+			<story-text>Start walking down what you think is the road but quickly cannot follow it.  The snow is too deep and you start getting tired fast.  Based on the movement of the sun you know that the day is moving by faster than you expected.  YOU MUST BUILD/FIND A SHELTER!  </story-text>
+			<options>
+				<option>
+					<option-text>Go up the hill to your right</option-text>
+					<option-requires></option-requires>
+					<option-destination>Hills</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Go into the woods on your right</option-text>
+					<option-requires></option-requires>
+					<option-destination>Woods</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+			<scene-name>Woods</scene-name>
+			<story-text>You go down into the woods wary of your surroundings.  You must find some stuff for fire so you pause and look around after walking for a while  </story-text>
+			<options>
+				<option>
+					<option-text>Cut tree down</option-text>
+					<option-requires></option-requires>
+					<option-destination>Cutting tree</option-destination>
+					<add-inventory>wood</add-inventory>
+				</option>
+				<option>
+					<option-text>Chase the group of rabbits?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Rabbit chase</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Chasing the rabbits</scene-name>
+			<story-text>You chase after the group of rabbits hoping you can pounce on one and kill it.  As you are chasing after them you hit a rock with your toe and trip.  As you are tumbling down the mountainside you are wondering how you ever got in this situation.  You hit your head on a rock...it's over for you.  </story-text>
+			<options>
+				<option>
+					<option-text>Leave back towards the hills </option-text>
+					<option-requires></option-requires>
+					<option-destination>Hills</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Chase the group of rabbits?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Rabbit chase</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Cutting tree</scene-name>
+			<story-text>You go around to the different trees.  You wrap yourself around each one because you heard somewhere you can cut a tree down with the hatchet if you can wrap yourself around the tree.  You find the perfect tree and cut down some wood  </story-text>
+			<options>
+				<option>
+					<option-text>Leave back towards where you came from</option-text>
+					<option-requires></option-requires>
+					<option-destination>Back</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Chase the group of rabbits?</option-text>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Hills</scene-name>
+			<story-text>You go up into the hills nervous that the day is running out quickly.  You must find some materials or shelter  </story-text>
+			<options>
+				<option>
+					<option-text>Rip off branches from a few bushes </option-text>
+					<option-requires></option-requires>
+					<option-destination>Bush</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Chase the group of rabbits?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Rabbit chase</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Bush</scene-name>
+			<story-text>You go to the bush and rip off some of the branches for kindling.  </story-text>
+			<options>
+				<option>
+					<option-text></option-text>
+					<option-requires></option-requires>
+					<option-destination>Back</option-destination>
+					<add-inventory>Branches</add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Back</scene-name>
+			<story-text>You're are back from where you came from and now that you have a few useful items you wonder whats next.  </story-text>
+			<options>
+				<option>
+					<option-text>Go to hills?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Hills</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Go to woods?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Woods</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Gone to both?  Look around?</option-text>
+					<option-requires></option-requires>
+					<option-destination>Look around night one</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Look around night one</scene-name>
+			<story-text>Night has dawned and you got all your materials.  You look around and see a cave in the distance</story-text>
+			<options>
+				<option>
+					<option-text>It's getting late, it's still snowing, you gotta go.</option-text>
+					<option-requires></option-requires>
+					<option-destination>Cave 2</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Cave 2</scene-name>
+			<story-text>You approach the cave with your hatchet in hand.  You hear a shuffle of steps and your heart drops.  A herd of mountain goats pops out and scares you but they run away and you have the cave to yourself </story-text>
+			<options>
+				<option>
+					<option-text>Sleep</option-text>
+					<option-requires>Fire</option-requires>
+					<option-destination>Sleep Cave 2</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Make a fire</option-text>
+					<option-requires>branches, wood</option-requires>
+					<option-destination>Make a fire</option-destination>
+					<remove-inventory>branches, wood</remove-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Make a fire</scene-name>
+			<story-text>Congratualions you made a nice warm fire for yourself.  Pat yourself on the back!</story-text>
+			<options>
+				<option>
+					<option-text>Sleep</option-text>
+					<option-requires></option-requires>
+					<option-destination>Sleep Cave 2</option-destination>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Sleep Cave 2</scene-name>
+			<story-text>With a nice fire you use the pieces of your torn sleeping bag and sleep.</story-text>
+			<options>
+				<option>
+					<option-text></option-text>
+					<option-requires></option-requires>
+					<option-destination></option-destination>
+				</option>
+			</options>
+		</scene>
+        <scene>
+			<scene-name>Raft Accident</scene-name>
+			<story-text>As you approached the rapids and thought "well how hard can it be?" you didn't realize that the reason people didn't raft this far down the river was because of the sharp rocks. The ancient hazard, formed by an old lava flow, caught you unaware. "Did you really think it would be that easy?" you ask yourself. You were lucky, after all. The raft took the beating for you, but now you're back to where you were before: standing on a riverbank.</story-text>
+			<options>
+				<option>
+					<option-text>Look around</option-text>
+					<option-requires></option-requires>
+					<option-destination>Raft Accident-Look</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Scream in frustration</option-text>
+					<option-requires></option-requires>
+					<option-destination>Raft Accident-Scream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Start walking down stream</option-text>
+					<option-requires></option-requires>
+					<option-destination>Down stream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Raft Accident-Look</scene-name>
+			<story-text>You look around. The deflated raft is floating down stream without you. The forest surrounds you.</story-text>
+			<options>
+				<option>
+					<option-text>Look around</option-text>
+					<option-requires></option-requires>
+					<option-destination>Raft Accident-Look</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Scream in frustration</option-text>
+					<option-requires></option-requires>
+					<option-destination>Raft Accident-Scream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Start walking down stream</option-text>
+					<option-requires></option-requires>
+					<option-destination>Down stream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Raft Accident-Scream</scene-name>
+			<story-text>"AAAAAAAHHHHHHHHHHHHRRRRGGGGGGGHHHHHHHHH!!!!!!" You listen as your cry of frustration echos. You hate this stupid mountain. You hate the stupid river, the stupid rocks that ruined your raft. Why couldn't it just be easy for once?</story-text>
+			<options>
+				<option>
+					<option-text>Look around</option-text>
+					<option-requires></option-requires>
+					<option-destination>Raft Accident-Look</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Start walking down stream</option-text>
+					<option-requires></option-requires>
+					<option-destination>Down stream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Down Stream</scene-name>
+			<story-text>As you climb over rocks and walk around trees you can't help but think about how much you wish you were back at home in a warm bed. You tell yourself that when you get back you are going to take the longest shower in the history of the world.</story-text>
+			<options>
+				<option>
+					<option-text>Keep walking</option-text>
+					<option-requires></option-requires>
+					<option-destination>Farther Down Stream</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Farther Down Stream</scene-name>
+			<story-text>You keep walking farther. The heat of the afternoon reaches its peak. You realize you haven't eaten in awhile or had any water. </story-text>
+			<options>
+				<option>
+					<option-text>Forage for food</option-text>
+					<option-requires></option-requires>
+					<option-destination>Foraging</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Eat fish</option-text>
+					<option-requires>Fish</option-requires>
+					<option-destination>Eating</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Foraging</scene-name>
+			<story-text>As you wander around the riverbank you come across across a berry buhs. "Jackpot!" you think as you start collecting berries. Distracted by food, you didn't hear the bears coming up behind you. Adrenaline is dumped into your body. You notice the smaller bear, clearly the angry bear is the mama. And you're in her territory.</story-text>
+			<options>
+				<option>
+					<option-text>Play dead</option-text>
+					<option-requires></option-requires>
+					<option-destination>Play Dead</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Run</option-text>
+					<option-requires></option-requires>
+					<option-destination>Run</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Eating</scene-name>
+			<story-text>You sit down on a nearby rock as you slowly eat your snack. Distracted by food, you didn't hear the bears coming up behind you. Adrenaline is dumped into your body. You notice the smaller bear, clearly the angry bear is the mama. And you're in her territory.</story-text>
+			<options>
+				<option>
+					<option-text>Play dead</option-text>
+					<option-requires></option-requires>
+					<option-destination>Play Dead</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Run into forest</option-text>
+					<option-requires></option-requires>
+					<option-destination>Run</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+				<option>
+					<option-text>Run into river</option-text>
+					<option-requires></option-requires>
+					<option-destination>Swim</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Play Dead</scene-name>
+			<story-text>You drop to the ground. You seem to remember hearing somewhere that playing dead is the correct thing to do. The bear charges you as you hold your breath. In your head you beg the bear to leave you alone.\n\nHikers find your body 2 months later.</story-text>
+			<options>
+				<option>
+					<option-text>End game</option-text>
+					<option-requires></option-requires>
+					<option-destination></option-destination>
+					<add-inventory></add-inventory>
+					<remove-inventory>PlayGame</remove-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Run</scene-name>
+			<story-text>In a panic you run into the forest. The bear takes off after you. You look behind as you run and you see the bear gaining. You put everything you have into running but the bear is just faster than you.\n\nHikers find your body 2 months later.</story-text>
+			<options>
+				<option>
+					<option-text>End game</option-text>
+					<option-requires></option-requires>
+					<option-destination></option-destination>
+					<add-inventory></add-inventory>
+					<remove-inventory>PlayGame</remove-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Swim</scene-name>
+			<story-text>You bolt to the river. Why would the bear follow you? As the current carries you down stream, aided by your frantic stokes, you look behind you. The bear lets out one last growl from the riverbank before turning and leaving. That was a close one!</story-text>
+			<options>
+				<option>
+					<option-text>Keep swimming</option-text>
+					<option-requires></option-requires>
+					<option-destination>Keep Swimming</option-destination>
+					<add-inventory></add-inventory>
+				</option>
+			</options>
+		</scene>
+		<scene>
+			<scene-name>Keep Swimming</scene-name>
+			<story-text>You've been swimming for what feels like ages. The adrenaline from your near death experience is starting to wear off. You take a moment to simply tread water, letting the river to the work of carrying you down stream. You close your eyes and think about just how close you came to death. "What in the world are you doing in the river?!" The question shocks your eyes open. A man is standing in his boat in the distance, clearly looking at you. You have found your salvation.</story-text>
+			<options>
+				<option>
+					<option-text>End game</option-text>
+					<option-requires></option-requires>
+					<option-destination></option-destination>
+					<add-inventory>PlayGame</add-inventory>
+				</option>
+			</options>
+		</scene>
+    	<scene>
+       		<scene-name>River1</scene-name>
+        	<story-text>After hearing the sound of running water you decide to explore further and discover a river:</story-text>
+        	<options>
+            	<option>
+               		<option-text>Drink from the river</option-text>
+               		<option-destination>Drink</option-destination>
+            	</option>
+            	<option>
+                	<option-text>Cross the river</option-text>
+                	<option-destination>River cross</option-destination>
+            	</option>
+            	<option>
+                	<option-text>Go swimming</option-text>
+                	<option-destination>Swimming</option-destination>
+           		</option>
+        	</options>
+    	</scene>
+    	<scene>
+        	<scene-name>Drink</scene-name>
+        	<story-text>You approach the edge of the river you cup your hands and start to drink the fresh mountain water. As you look down notice fish swimming in water.</story-text>
+        	<options>
+		        <option>
+		            <option-text>Attempt to catch a fish</option-text>
+		            <option-destination>fishing</option-text>
+		        </option>
+		        <option>
+		            <option-text>Ignore</option-text>
+		            <option-destination>Ignore</option-text>
+		        </option>
+        	</options>
+		</scene>
+		<scene>
+		    <scene-name>Ignore</scene-name>
+		    <story-text>You ignore the fact, that there are potential meals passing right before your eyes, but feel replenished by the fresh run-off from the recent melting of the snowpack </story-text>
+		    <options>
+		        <option>
+		            <option-text>Cross the river</option-text>
+		            <option-destination>River cross</option-text>
+		        </option>
+		        <option>
+		            <option-text>Go swimming</option-text>
+		            <option-destination>Swimming</option-text>
+		        </option>
+		    </options>
+		</scene>
+		<scene>
+		    <scene-name>fishing</scene-name>
+		    <story-text>After observing the movement of the fish, you reach in the water with your hand and get a hold of one. </story-text>
+		    <options>
+		        <option>
+		            <option-text>Store fish for later/option-text>
+		            <option-destination>store fish</option-text>
+		        </option>
+		        <option>
+		            <option-text>Consume fish</option-text>
+		            <option-destination>Dead fish</option-text>
+		        </option>
+		    </options>
+		</scene>
+		<scene>
+		    <scene-name>Dead fish</scene-name>
+		    <story-text>You take several giant bites out of the the live fish hoping to stifle the painful hunger in your stomach. It satisfies you for the remainder of the day, but as the the night progresses, your body begins to reject the raw flesh it has been given. You manage to drift into a slumber but your digestive system has other plans. The semi-digested fish meat finds its way back to its point of origin and as it reaches exit, you begin to choke, gasping  for air you inhale, only allowing the former contents of your stomach to fill your lungs. As your body reaches its breaking point without any oxygen, you drift back into a permanent sleep. </story-text>
+		</scene>
+		<scene>
+		    <scene-name>River cross</scene-name>
+		    <story-text>You slowly start to wade the river, as you approach half way the water is above your waist and the current is becoming too much to handle</story-text>
+		    <options>
+		        <option>
+		            <option-text>Turn back</option-text>
+		            <option-destination>Turn back</option-text>
+		        </option>
+		        <option>
+		            <option-text>Keep pushing forward</option-text>
+		            <option-destination>Death</option-text>
+		        </option>
+		    </options>
+		</scene>
+		<scene>
+		    <scene-name>Death</scene-name>
+		    <story-text>The strong current of the river causes you to lose your balance and fall into the strong current which begins carrying you along its path. You struggle to keep your head above the surface and water begins filling your lungs. You briefly think about how cold the water is before the river the brings your skull onto a collision course with a large bed of rocks in the water. Then, darkness. </story-text>
+		</scene>
+		<scene>
+		    <scene-name>Swimming</scene-name>
+		    <story-text>You remove your clothes and enter the river. After a few moments in the water you realize you've made a horrible mistake as the water's temperature is much too low for such an activity. Before you can even think about swimming back to shore, the current of the river sweeps you away and deliver you to death's doorstep.</story-text>
+		</scene>
+		<scene>
+		    <scene-name>Turn back</scene-name>
+		    <story-text>Your gut-feeling perhaps saves your life as you decide that the risk to too big to continue crossing the river. As you turn back and begin walking towards the show, you notice some drift wood along the edge of the river and how it's buoyancy properties could be beneficial to your survival</story-text>
+		    <options>
+		        <option>
+		            <option-text>Build a raft</option-text>
+		            <option-destination>rafting</option-text>
+		        </option>
+		    </options>
+		</scene>
+		<scene>
+		    <scene-name>Rafting</scene-name>
+		    <story-text>You construct a raft from the driftwood and set sail down the river</story-text>
+		</scene>
+	</scenes>
+</story>
